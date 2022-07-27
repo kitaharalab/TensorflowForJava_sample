@@ -8,12 +8,12 @@ git clone https://github.com/kitaharalab/TensorflowForJava_sample.git
 ```
 
 ## Run the application
-###Windows
+### Windows
 ```
 gradlew.bat run
 ```
 
-###Mac
+### Mac
 ```
 gradlew run
 ```
