@@ -164,9 +164,9 @@ public class Classfication {
 
         public void testSaveModelBundle(){
             System.out.println("Start...\n");
-            load(); //モデル読み込み。
-            predict();　//予測。
-            unload(); //モデル解放。
+            load();
+            predict();
+            unload();
             System.out.println("\nend...");
         }
     }
