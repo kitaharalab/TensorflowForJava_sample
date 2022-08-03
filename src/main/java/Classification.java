@@ -24,17 +24,24 @@ import org.tensorflow.exceptions.TensorFlowException;
 class Classification {
 
     public static void main(String[] args) {
+
+
         Classification clf = new Classification();
         System.out.println("Start...\n");
 
         try {
+            //モデル読み込み。
             SavedModelBundle model = clf.loadModel();
+            //入力データ読み込み。
             Float[][] input_data = clf.loaddata();
+            //入力データを学習データ用に整形。
             FloatNdArray tranning_data = clf.convert2Matrix(input_data);
+            //予測を実行。
             TFloat32 prediction = clf.predict(model, tranning_data);
     
             System.out.println("");
             System.out.println("prediction: ");
+            //予測データ出力。
             for (int i=0; i<10;i++){
                 System.out.print(prediction.getFloat(0,i)+", ");
             }
@@ -49,13 +56,13 @@ class Classification {
             e.printStackTrace();
         } catch(URISyntaxException e){
             System.err.println("Path to model is not correct");
-            e.printStackTrace();
+            e.printSt   kTrace();
         } catch(IOException e){
             System.err.println("Input file not found");
             e.printStackTrace();
         }
     }
-    
+
 
     public SavedModelBundle loadModel() throws TensorFlowException,URISyntaxException {
 
