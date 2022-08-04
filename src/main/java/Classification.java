@@ -34,7 +34,7 @@ class Classification {
             SavedModelBundle model = clf.loadModel();
             //入力データ読み込み。
             Float[][] input_data = clf.loaddata();
-            //入力データをテストデータ用に整形。
+            //入力データをテスト用データに整形。
             FloatNdArray tranning_data = clf.convert2Matrix(input_data);
             //予測を実行。
             TFloat32 prediction = clf.predict(model, tranning_data);
