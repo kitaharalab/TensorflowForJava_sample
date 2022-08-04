@@ -56,7 +56,7 @@ class Classification {
             e.printStackTrace();
         } catch(URISyntaxException e){
             System.err.println("Path to model is not correct");
-            e.printSt   kTrace();
+            e.printStackTrace();
         } catch(IOException e){
             System.err.println("Input file not found");
             e.printStackTrace();
